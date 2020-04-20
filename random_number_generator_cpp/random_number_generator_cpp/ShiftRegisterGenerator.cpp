@@ -7,7 +7,9 @@ ShiftRegisterGenerator::ShiftRegisterGenerator()
 
 unsigned int ShiftRegisterGenerator::GetRandomNumber()
 {
-	unsigned int xor_p = 0x00000001 << (INIT_VECTOR_LENGTH - P), xor_q = 0x00000001 << (INIT_VECTOR_LENGTH - Q), xor_result = 0;
+	unsigned int xor_p = 0x00000001 << (INIT_VECTOR_LENGTH - P);
+	unsigned int xor_q = 0x00000001 << (INIT_VECTOR_LENGTH - Q);
+	unsigned int xor_result = 0;
 	for (int i = INIT_VECTOR_LENGTH; i < 32; ++i)
 	{
 		xor_result = (xor_p & this->starting_vector_) << P;
