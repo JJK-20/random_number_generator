@@ -71,6 +71,7 @@ _random_number_shift_register PROC
 		;with actual_vector and vector with bits to xor
 		;if resault of operation is equal to 0 or equal to vector with bits to xor
 		;it's mean XOR operation resault will be 0
+		;else XOR operation resault will be 1
 		mov edx,eax
 		and edx,ebx
 		cmp edx,0
